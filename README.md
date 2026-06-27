@@ -6,7 +6,7 @@
 ```bash
 import { NextRequest, NextResponse } from "next/server";
 
-export function proxy(request: NextRequest) {
+export function proxy(request:NextRequest) {
     if (request.nextUrl.pathname.startsWith('/api')) {
         console.log('This is API route inside app dir')
         return NextResponse.next();
